@@ -27,7 +27,7 @@ const createGreeter = (greeting) => {
         console.log(`${greeting}, ${name}!`);
     };
 };
-const sayHello = createGreeter("Xin chào");
-const sayGoodbye = createGreeter("Tạm biệt");
+const sayHello = createGreeter("Hello");
+const sayGoodbye = createGreeter("Goodbye");
 sayHello("Quang Minh");
 sayGoodbye("Quang Minh");
