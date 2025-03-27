@@ -1,0 +1,13 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const lab4_module_1 = require("./lab4_module");
+const owner = new lab4_module_1.Transport.Person("Nguyen", "Quang", "Minh", new Date("1999-01-01"), lab4_module_1.Transport.DocType.Паспорт, "AB", "123456");
+const car = new lab4_module_1.Transport.CarVehicle("Toyota", "Camry", 2020, "VIN123", "ABC-123", owner, lab4_module_1.Transport.CarBodyType.Седан, lab4_module_1.Transport.CarClass.D);
+const motorbike = new lab4_module_1.Transport.MotorbikeVehicle("Honda", "CBR", 2021, "VIN456", "XYZ-789", owner, "Carbon", true);
+owner.printInfo();
+car.printVehicleInfo();
+motorbike.printVehicleInfo();
+const carStorage = new lab4_module_1.Transport.VehicleStorageImpl(new Date(), [car]);
+console.log("Автомобили в хранилище:", carStorage.getAllVehicles());
+const motorbikeStorage = new lab4_module_1.Transport.VehicleStorageImpl(new Date(), [motorbike]);
+console.log("Мотоциклы в хранилище:", motorbikeStorage.getAllVehicles());
